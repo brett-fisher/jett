@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "codegen:sql": "kysely-codegen --dialect=postgres --include-pattern=\"public.*\" --schema=public --env-file=.env --out-file=./src/lib/supabase/database.ts"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.3",
@@ -15,9 +16,11 @@
     "@supabase/supabase-js": "^2.48.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "kysely": "^0.27.5",
     "lucide-react": "^0.475.0",
     "next": "15.1.7",
     "next-auth": "^4.24.11",
+    "pg": "^8.13.3",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
     "shadcn-ui": "^0.9.4",
@@ -26,7 +29,9 @@
   },
   "devDependencies": {
     "@types/node": "^22.13.1",
+    "@types/pg": "^8.11.11",
     "@types/react": "19.0.8",
+    "kysely-codegen": "^0.17.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.7.3"
