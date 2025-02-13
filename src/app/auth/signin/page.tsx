@@ -1,5 +1,3 @@
-'use client'
-
 import { supabase } from '@/lib/supabase/supabase'
 
 export default function SignIn() {
