@@ -7,7 +7,7 @@ export default function SignIn() {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${process.env.NEXTAUTH_URL}/dashboard`,
+        redirectTo: `${process.env.NEXTAUTH_URL}`,
       }
     })
 
