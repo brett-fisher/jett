@@ -1,6 +1,6 @@
 'use client'
 
-import { supabase } from '@/lib/supabase'
+import { supabase } from '@/lib/supabase/supabase'
 
 export default function SignIn() {
   const handleGoogleSignIn = async (): Promise<void> => {

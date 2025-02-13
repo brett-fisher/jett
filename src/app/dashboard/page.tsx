@@ -1,7 +1,7 @@
 'use client'
 
 import { useAuth } from '@/lib/auth/AuthContext'
-import { supabase } from '@/lib/supabase'
+import { supabase } from '@/lib/supabase/supabase'
 import { redirect } from 'next/navigation'
 import {
   DropdownMenu,
