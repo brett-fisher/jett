@@ -1,13 +1,13 @@
 'use client'
 
-import { supabase } from '@/lib/supabase'
+import { supabase } from '@/lib/supabase/supabase'
 
 export default function SignIn() {
   const handleGoogleSignIn = async (): Promise<void> => {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/dashboard`
+        redirectTo: `${process.env.NEXTAUTH_URL}`,
       }
     })
 
